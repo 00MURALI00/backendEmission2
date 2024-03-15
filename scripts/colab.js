@@ -3,7 +3,7 @@ const { parse } = require('json2csv');
 const runColabScript = require('./runPython');
 
 const executeColabFile = (req, res, next) => {
-  const emissionsParams = parseInt(req.body.emissions) || 1000;
+  const emissionsParams = parseInt(req.body.emissions) || 0;
   const dataset = [
         {
           Model: 'RNN',
